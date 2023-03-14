@@ -1,0 +1,13 @@
+$max: 100;
+$offset: 1;
+$unit: '%';
+@mixin app-width() {
+	$i: 1;
+	@while $i <= $max {
+		.wd-#{$i} {
+			width: #{$i + $unit};
+		}
+		$i: $i + $offset;
+	}
+}
+@include app-width();

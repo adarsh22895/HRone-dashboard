@@ -1,0 +1,206 @@
+@import './variables';
+
+.feed-section {
+    background-color: #f4f4f4;
+    @include sm {
+        width: 100%;
+    }
+    .main {
+        padding: 25px 24px;
+        .Onboarding {
+            display: flex;
+            .onboard-heading {
+                h1 {
+                    color: $dark-grey;
+                    font-weight: 700;
+                    margin: 0;
+                }
+                span {
+                    color: #525252;
+                }
+            }
+            .onboard-img {
+                margin-left: 20px;
+            }
+        }
+        .post-menu {
+            background-color: $white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 16px;
+            @include sm {
+                padding: 16px 16px 6px;
+            }
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    display: inline-block;
+                    border-right: 1px solid #E0E0E0;
+                    padding: 0px 22px;
+                    &:last-child,
+                    &:nth-last-child(2) {
+                        border-right: none;
+                    }
+                    @include sm {
+                        border:none;
+                        padding: 0px;
+                        width: calc(100% / 3 - 6px);
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        text-decoration: none;
+                        img {}
+                        .menu-item {
+                            font-size: 12px;
+                            color:#525252;
+                            display: inline-block;
+                            padding-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        .forYou {
+            h3 {
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .eventsWrapper {
+                display: flex;
+                @include sm {
+                    display: block;
+                }
+                .event {
+                    background-color: $white;
+                    border-right: 4px solid $celebration-right;
+                    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                    padding: 8px 16px;
+                    display: flex;
+                    margin-right: 16px;
+                    @include sm {
+                        margin-bottom: 10px;
+                        margin-right: 0;
+                    }
+                    .event-content {
+                        margin-left: 8px;
+                        @include sm {
+                            margin-left: 15px;
+                        }
+                        h5 {
+                            font-weight: 700;
+                            margin: 0;
+                        }
+                        span {
+                            color: $dark-grey;
+                        }
+                        .time {
+                            color:#A8A8A8;
+                            font-weight: 400;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .feeds-wrapper {
+            h3 {
+                font-weight: bold;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+            .filter {
+                width: 24px;
+                height: 24px;
+            }
+            .feed {
+                background-color: $white;
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 4px 12px rgba(0, 0, 0, 0.15);
+                border-radius: 8px;
+                padding: 16px;
+                .feed-header {
+                    .postUser {
+                        display: flex;
+                        .userImg {
+                            width: 40px;
+                            height: 40px;
+                        }
+                        .userDetails {
+                            margin-left: 10px;
+                            h5 {
+                                margin: 0;
+                                font-weight: 700;
+                            }
+                            .time {
+                                color: #525252;
+                            }
+                        }
+                        
+                    }
+                    .feature-badge{
+                        color: $txt-purple;
+                        background-color: $purple-badge-bg;
+                        padding: 2px 14px;
+                        border-radius: 10px;
+                        height: 26px;
+
+                    }
+                }
+                .post {
+                    color: $dark-grey;
+                }
+                .seeMore {
+                    color: #979797;
+                    text-decoration: none;
+                }
+                .likeComment {
+                    display: flex;
+                    display: flex;
+                    .like {
+                        color: #525252;
+                        img{
+                            display: inline-block;
+                            margin-right: 8px;
+                        }
+                    }
+                    .comment {
+                        display: flex;
+                        align-items: center;
+                        .dot {
+                            height: 4px;
+                            width: 4px;
+                            background-color: #525252;
+                            display: inline-block;
+                            border-radius: 10px;
+                            margin: 0 8px;
+                        }
+                        color: #525252;
+                    }
+                }
+                .cheersWrapper {
+                    background-color: $cheers-comment-bg;
+                    padding: 10px 21px;
+                    border-radius: 8px;
+                    .cheers {
+                        color: #525252;
+                        img{
+                            display: inline-block;
+                            margin-right: 8px;
+                        }
+                    }
+                    .comment {
+                        color: #525252;
+                        img{
+                            display: inline-block;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,114 @@
+@import 'variables';
+@import 'font-size';
+@import 'header';
+@import 'mixins';
+@import 'widthSize';
+@import 'celebrations';
+@import 'feed';
+@import 'quickActions';
+
+.mobile-menu {
+    @include xl {
+        display: none;
+    }
+    position: absolute;
+    top: 0;
+    background: #fff;
+    left: -250px;
+    width: 23%;
+    height: 100%;
+    border-right: 6px solid $celebration-right;
+    transition: 0.3s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 15px;
+    z-index: 9;
+    &.show{
+        left: 0;
+    }
+    .menu-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                &:nth-child(3n) { 
+                    border-bottom: 1px solid $light-grey-border;
+                }
+                margin: 10px 0 10px;
+                padding: 0px 0px;
+                text-align: center;
+                a {
+                    border-radius: 8px;
+                    width: 45px;
+                    line-height: 40px;
+                    height: 45px;
+                    display: inline-block;
+                    text-align: center;
+                }
+                &.active {
+                    a {
+                        background-color: $active-menu-bg;
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// desktop menu
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            &:nth-child(3n) { 
+                border-bottom: 1px solid $light-grey-border;
+            }
+            margin: 15px 0 15px;
+            padding: 0px 0px 15px;
+            text-align: center;
+            a {
+                border-radius: 8px;
+                width: 45px;
+                line-height: 40px;
+                height: 45px;
+                display: inline-block;
+                text-align: center;
+            }
+            &.active {
+                a {
+                    background-color: $active-menu-bg;
+                    
+                }
+            }
+        }
+    }
+}
+.see-more {
+   color: $link-color;
+   font-weight: 700;
+}
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+.divider {
+    background-color: #E0E0E0;
+    height: 1px;
+    margin: 16px 0;
+}
